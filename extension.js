@@ -34,7 +34,7 @@ const PopupMenu = imports.ui.popupMenu;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
-const NetworkPanel = Main.panel.statusArea.aggregateMenu._network;
+const NetworkPanel = Main.panel.statusArea.quickSettings
 
 const NMC = libnm_glib ? imports.gi.NMClient : imports.gi.NM;
 const NetworkManager = libnm_glib ? imports.gi.NetworkManager : NMC;
