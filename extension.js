@@ -44,13 +44,13 @@ const _ = Gettext.gettext;
 
 /* Used to request via HTTP the public address to a server. */
 const Soup = imports.gi.Soup;
-const _httpSession = new Soup.SessionAsync();
+const _httpSession = Soup.Session.new();
 /* This makes the session work under a proxy. The funky syntax here
  * is required because of another libsoup quirk, where there's a GObject
  * property called 'add-feature', designed as a construct property for
  * C convenience.
  */
-Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefault());
+// Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefault());
 
 /* Setup to make the Preferences button in the PopupMenu open directly
  * the prefs GUI.
